@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 331854814970709135}
   - component: {fileID: 3500106864677246153}
   - component: {fileID: 8923397265773839361}
-  - component: {fileID: 3678927653235637982}
   m_Layer: 0
   m_Name: PipeWithFan
   m_TagString: Untagged
@@ -115,25 +114,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0.07}
---- !u!114 &3678927653235637982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005790437123930278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327e576c65e35db49af0bdf3bc877ea2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
-  obstaclePrefabs:
-  - {fileID: 3352286322809186289, guid: eeeaafa07009562478df948e4bac4c72, type: 3}
-  - {fileID: 4254838278950075500, guid: fe02ee6b97e3959438029af6bde87b42, type: 3}
-  laneDistance: 3
-  spawnChance: 0.5
-  initialDelay: 5
-  spawnInterval: 2
 --- !u!1001 &3927393783571799063
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -102,7 +102,6 @@ GameObject:
   - component: {fileID: 3584293193464541191}
   - component: {fileID: 5147163157346202183}
   - component: {fileID: 3767120420006953815}
-  - component: {fileID: 2906044178406065039}
   m_Layer: 0
   m_Name: StraightPipe
   m_TagString: Untagged
@@ -204,22 +203,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10, y: 2.220446e-16, z: 10}
   m_Center: {x: 0, y: 0, z: 0.07}
---- !u!114 &2906044178406065039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7870500488100079388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 327e576c65e35db49af0bdf3bc877ea2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
-  obstaclePrefabs:
-  - {fileID: 3352286322809186289, guid: eeeaafa07009562478df948e4bac4c72, type: 3}
-  - {fileID: 4254838278950075500, guid: fe02ee6b97e3959438029af6bde87b42, type: 3}
-  laneDistance: 3
-  spawnChance: 0.5
-  initialDelay: 5
-  spawnInterval: 2

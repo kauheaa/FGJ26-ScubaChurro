@@ -1808,6 +1808,7 @@ GameObject:
   - component: {fileID: 8244439339938322352}
   - component: {fileID: 8244439339938322353}
   - component: {fileID: 8244439339938322354}
+  - component: {fileID: 8244439339938322355}
   m_Layer: 0
   m_Name: SewerTileManager
   m_TagString: Untagged
@@ -1855,6 +1856,7 @@ MonoBehaviour:
   - {fileID: 2005790437123930278, guid: bf781064ba49aae4a8ac33addcda9c64, type: 3}
   - {fileID: 2466629928099360106, guid: 021ac16ccca32214288ea3809c94df25, type: 3}
   - {fileID: 5493731254683825842, guid: d2dcf05b7219da0469e430423ae24527, type: 3}
+  obstacleSpawner: {fileID: 8244439339938322355}
   tilesOnScreen: 6
   tileLength: 1
 --- !u!114 &8244439339938322352
@@ -1902,6 +1904,23 @@ MonoBehaviour:
   startSpeed: 10
   maxSpeed: 25
   speedIncreasePerSecond: 0.3
+--- !u!114 &8244439339938322355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5397736407822461070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327e576c65e35db49af0bdf3bc877ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObstacleSpawner
+  obstaclePrefabs:
+  - {fileID: 4254838278950075500, guid: fe02ee6b97e3959438029af6bde87b42, type: 3}
+  - {fileID: 3352286322809186289, guid: eeeaafa07009562478df948e4bac4c72, type: 3}
+  laneDistance: 3
+  spawnChance: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

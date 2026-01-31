@@ -5,14 +5,14 @@ public class EndlessTileManager : MonoBehaviour
 {
     public Transform player;
     public GameObject[] tilePrefabs;
+    public ObstacleSpawner obstacleSpawner; // ⭐
 
     public int tilesOnScreen = 6;
-    public float tileLength = 1f; 
+    public float tileLength = 1f;
 
     private float nextSpawnZ = 0f;
     private Queue<GameObject> activeTiles = new Queue<GameObject>();
-
-    private int tilesSpawned = 0; 
+    private int tilesSpawned = 0;
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class EndlessTileManager : MonoBehaviour
         if (activeTiles.Count > 0)
         {
             GameObject oldestTile = activeTiles.Peek();
-            if (player.position.z - oldestTile.transform.position.z >= tileLength * 2f) 
+            if (player.position.z - oldestTile.transform.position.z >= tileLength * 2f)
             {
                 Destroy(activeTiles.Dequeue());
             }
@@ -47,17 +47,19 @@ public class EndlessTileManager : MonoBehaviour
         if (tilesSpawned < 10)
             prefab = tilePrefabs[0];
         else
-        {
-            int index = Random.Range(0, tilePrefabs.Length);
-            prefab = tilePrefabs[index];
-        }
+            prefab = tilePrefabs[Random.Range(0, tilePrefabs.Length)];
 
         Vector3 spawnPos = new Vector3(0f, 0f, nextSpawnZ + tileLength * 0.5f);
         GameObject tile = Instantiate(prefab, spawnPos, Quaternion.identity);
 
         activeTiles.Enqueue(tile);
         nextSpawnZ += tileLength;
-
         tilesSpawned++;
+
+        // ⭐ Spawnataan obstacle TILEN YHTEYDESSÄ
+        if (obstacleSpawner != null && tilesSpawned > 10)
+        {
+            obstacleSpawner.SpawnObstacle(tile.transform.position);
+        }
     }
 }
