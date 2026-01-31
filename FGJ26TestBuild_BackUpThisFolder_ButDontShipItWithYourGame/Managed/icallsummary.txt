@@ -977,7 +977,6 @@ UnityEngine.Object::FindObjectFromInstanceID_Injected
 UnityEngine.Object::ForceLoadFromInstanceID_Injected
 UnityEngine.Object::Internal_CloneSingleWithParent_Injected
 UnityEngine.Object::Internal_CloneSingle_Injected
-UnityEngine.Object::Internal_InstantiateSingleWithParent_Injected
 UnityEngine.Object::Internal_InstantiateSingle_Injected
 UnityEngine.Object::DestroyImmediate_Injected
 UnityEngine.Object::Destroy_Injected

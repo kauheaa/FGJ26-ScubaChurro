@@ -6,10 +6,10 @@ public class CameraFollow : MonoBehaviour
     public Transform target;
 
     [Header("Offset")]
-    public Vector3 offset = new Vector3(0, 5, -10);
+    public Vector3 offset = new Vector3(0, 10, -5);
 
     [Header("Smooth")]
-    public float smoothSpeed = 10f;
+    public float smoothTime = 0.3f;
 
     private Vector3 velocity = Vector3.zero;
 
@@ -17,17 +17,12 @@ public class CameraFollow : MonoBehaviour
     {
         if (!target) return;
 
-        Vector3 desiredPosition = new Vector3(
-            target.position.x + offset.x,
-            offset.y,
-            target.position.z + offset.z
-        );
+        // Pehmeä liikkuva position
+        Vector3 desiredPosition = target.position + offset;
+        transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, smoothTime);
 
-        transform.position = Vector3.SmoothDamp(
-            transform.position,
-            desiredPosition,
-            ref velocity,
-            1f / smoothSpeed
-        );
+        // Kamera katsoo alas pelaajaan, vähän eteenpäin
+        Vector3 lookTarget = target.position + Vector3.forward * 2f;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(lookTarget - transform.position), Time.deltaTime * 5f);
     }
 }

@@ -5,7 +5,7 @@ public class EndlessTileManager : MonoBehaviour
 {
     public Transform player;
     public GameObject[] tilePrefabs;
-    public ObstacleSpawner obstacleSpawner; // ⭐
+    public ObstacleSpawner obstacleSpawner; 
 
     public int tilesOnScreen = 6;
     public float tileLength = 1f;
@@ -56,7 +56,6 @@ public class EndlessTileManager : MonoBehaviour
         nextSpawnZ += tileLength;
         tilesSpawned++;
 
-        // ⭐ Spawnataan obstacle TILEN YHTEYDESSÄ
         if (obstacleSpawner != null && tilesSpawned > 10)
         {
             obstacleSpawner.SpawnObstacle(tile.transform.position);

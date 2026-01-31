@@ -40,15 +40,8 @@ extern void U3CStartGameAfterDelayU3Ed__7_MoveNext_m9CAC415F5C7EF1254577B6069EE4
 extern void U3CStartGameAfterDelayU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA181FB6604FA4F813CDBAECFAFECA81DA394A1A8 (void);
 extern void U3CStartGameAfterDelayU3Ed__7_System_Collections_IEnumerator_Reset_mE48BBEDB63E3C8ECCA9E602F9EF73E58A1776593 (void);
 extern void U3CStartGameAfterDelayU3Ed__7_System_Collections_IEnumerator_get_Current_mE30D17CAAD663FE8251CAAE5BD33EE44571AA493 (void);
-extern void ObstacleSpawner_Start_mE22338F0EB8D6446D5E09C3BC271B9A312FEB7BB (void);
-extern void ObstacleSpawner_SpawnObstacles_m46D2CB61EA4E299767204433A259F4ABFFDAE967 (void);
+extern void ObstacleSpawner_SpawnObstacle_m7E489758076C43D74560CFFBD482FE46E53EAB83 (void);
 extern void ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E8235A469E089DA17CC63C94 (void);
-extern void U3CSpawnObstaclesU3Ed__6__ctor_mA6CC86441C742D370409191D64C67AD172A03115 (void);
-extern void U3CSpawnObstaclesU3Ed__6_System_IDisposable_Dispose_mF71F2A95C34CD3479F74A67271ADACC3AFD4401B (void);
-extern void U3CSpawnObstaclesU3Ed__6_MoveNext_mFCCB48032E77B181A782BD7FD3FDE35AE1302EDA (void);
-extern void U3CSpawnObstaclesU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE08072A53A4FE32AAA3B6656FFCD5982BAD52890 (void);
-extern void U3CSpawnObstaclesU3Ed__6_System_Collections_IEnumerator_Reset_mDE36B44635715E42D2CF0DEE8BF0A6A0D47429C4 (void);
-extern void U3CSpawnObstaclesU3Ed__6_System_Collections_IEnumerator_get_Current_m11B60DE346991A1F7A1619749AE1C230AE04D45C (void);
 extern void PlayerDeath_Start_mC98F672F23B523BB9D65994C232306A9241E0044 (void);
 extern void PlayerDeath_OnTriggerEnter_mCF303DCDD872605FBA70B8EB5626119469FD848C (void);
 extern void PlayerDeath_ShowEndPanelCoroutine_mAE249805C794B449E99A417632B82FAEE7293C12 (void);
@@ -94,7 +87,7 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[87] = 
+static Il2CppMethodPointer s_methodPointers[80] = 
 {
 	CameraFollow_LateUpdate_m9C559F2A33098CED5CB8BD82CCD6FC98AB521D61,
 	CameraFollow__ctor_m113CC547D419EF599BC487F0F44B06BB2D4EE11B,
@@ -129,15 +122,8 @@ static Il2CppMethodPointer s_methodPointers[87] =
 	U3CStartGameAfterDelayU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mA181FB6604FA4F813CDBAECFAFECA81DA394A1A8,
 	U3CStartGameAfterDelayU3Ed__7_System_Collections_IEnumerator_Reset_mE48BBEDB63E3C8ECCA9E602F9EF73E58A1776593,
 	U3CStartGameAfterDelayU3Ed__7_System_Collections_IEnumerator_get_Current_mE30D17CAAD663FE8251CAAE5BD33EE44571AA493,
-	ObstacleSpawner_Start_mE22338F0EB8D6446D5E09C3BC271B9A312FEB7BB,
-	ObstacleSpawner_SpawnObstacles_m46D2CB61EA4E299767204433A259F4ABFFDAE967,
+	ObstacleSpawner_SpawnObstacle_m7E489758076C43D74560CFFBD482FE46E53EAB83,
 	ObstacleSpawner__ctor_mD0E52BA33EF3B1B5E8235A469E089DA17CC63C94,
-	U3CSpawnObstaclesU3Ed__6__ctor_mA6CC86441C742D370409191D64C67AD172A03115,
-	U3CSpawnObstaclesU3Ed__6_System_IDisposable_Dispose_mF71F2A95C34CD3479F74A67271ADACC3AFD4401B,
-	U3CSpawnObstaclesU3Ed__6_MoveNext_mFCCB48032E77B181A782BD7FD3FDE35AE1302EDA,
-	U3CSpawnObstaclesU3Ed__6_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mE08072A53A4FE32AAA3B6656FFCD5982BAD52890,
-	U3CSpawnObstaclesU3Ed__6_System_Collections_IEnumerator_Reset_mDE36B44635715E42D2CF0DEE8BF0A6A0D47429C4,
-	U3CSpawnObstaclesU3Ed__6_System_Collections_IEnumerator_get_Current_m11B60DE346991A1F7A1619749AE1C230AE04D45C,
 	PlayerDeath_Start_mC98F672F23B523BB9D65994C232306A9241E0044,
 	PlayerDeath_OnTriggerEnter_mCF303DCDD872605FBA70B8EB5626119469FD848C,
 	PlayerDeath_ShowEndPanelCoroutine_mAE249805C794B449E99A417632B82FAEE7293C12,
@@ -184,7 +170,7 @@ static Il2CppMethodPointer s_methodPointers[87] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[87] = 
+static const int32_t s_InvokerIndices[80] = 
 {
 	13937,
 	13937,
@@ -219,15 +205,8 @@ static const int32_t s_InvokerIndices[87] =
 	13730,
 	13937,
 	13730,
+	10723,
 	13937,
-	13730,
-	13937,
-	10477,
-	13937,
-	13536,
-	13730,
-	13937,
-	13730,
 	13937,
 	10540,
 	13730,
@@ -271,14 +250,14 @@ static const int32_t s_InvokerIndices[87] =
 	13937,
 	13937,
 	13937,
-	24264,
+	24261,
 	13937,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	87,
+	80,
 	s_methodPointers,
 	0,
 	NULL,

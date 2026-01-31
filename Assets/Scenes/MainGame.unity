@@ -408,7 +408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 639791716}
   offset: {x: 0, y: 3, z: -10}
-  smoothSpeed: 10
+  smoothTime: 0.3
 --- !u!1 &350026200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1855,7 +1855,6 @@ MonoBehaviour:
   - {fileID: 7870500488100079388, guid: f1083032cc0905c4f8f0f1e23a2fb0d9, type: 3}
   - {fileID: 2005790437123930278, guid: bf781064ba49aae4a8ac33addcda9c64, type: 3}
   - {fileID: 2466629928099360106, guid: 021ac16ccca32214288ea3809c94df25, type: 3}
-  - {fileID: 5493731254683825842, guid: d2dcf05b7219da0469e430423ae24527, type: 3}
   obstacleSpawner: {fileID: 8244439339938322355}
   tilesOnScreen: 6
   tileLength: 1
