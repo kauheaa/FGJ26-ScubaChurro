@@ -9,6 +9,7 @@
 
 extern void CameraFollow_LateUpdate_m9C559F2A33098CED5CB8BD82CCD6FC98AB521D61 (void);
 extern void CameraFollow__ctor_m113CC547D419EF599BC487F0F44B06BB2D4EE11B (void);
+extern void CurvedTile_Start_mE8EA07771DAADB0390D7B3B251589BD7C70C439A (void);
 extern void CurvedTile_Update_m7201205C78326606CA9877CFDA089A52AFF72093 (void);
 extern void CurvedTile_CheckPlayerOnTile_m5F573674CAD7B53570AAF20886CCF44C2756674E (void);
 extern void CurvedTile__ctor_m46D904F251ECD411847EA520FE67B55980DC3030 (void);
@@ -87,10 +88,11 @@ extern void Readme__ctor_m69C325C4C171DCB0312B646A9034AA91EA8C39C6 (void);
 extern void Section__ctor_m5F732533E4DFC0167D965E5F5DB332E46055399B (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[80] = 
+static Il2CppMethodPointer s_methodPointers[81] = 
 {
 	CameraFollow_LateUpdate_m9C559F2A33098CED5CB8BD82CCD6FC98AB521D61,
 	CameraFollow__ctor_m113CC547D419EF599BC487F0F44B06BB2D4EE11B,
+	CurvedTile_Start_mE8EA07771DAADB0390D7B3B251589BD7C70C439A,
 	CurvedTile_Update_m7201205C78326606CA9877CFDA089A52AFF72093,
 	CurvedTile_CheckPlayerOnTile_m5F573674CAD7B53570AAF20886CCF44C2756674E,
 	CurvedTile__ctor_m46D904F251ECD411847EA520FE67B55980DC3030,
@@ -170,8 +172,9 @@ static Il2CppMethodPointer s_methodPointers[80] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
-static const int32_t s_InvokerIndices[80] = 
+static const int32_t s_InvokerIndices[81] = 
 {
+	13937,
 	13937,
 	13937,
 	13937,
@@ -257,7 +260,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	80,
+	81,
 	s_methodPointers,
 	0,
 	NULL,

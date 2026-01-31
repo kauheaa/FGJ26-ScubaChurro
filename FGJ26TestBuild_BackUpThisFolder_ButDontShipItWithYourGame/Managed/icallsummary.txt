@@ -1046,6 +1046,7 @@ UnityEngine.Quaternion::Internal_AngleAxis_Injected
 UnityEngine.Quaternion::Internal_FromEulerRad_Injected
 UnityEngine.Quaternion::Internal_FromToRotation_Injected
 UnityEngine.Quaternion::Internal_Inverse_Injected
+UnityEngine.Quaternion::Internal_Lerp_Injected
 UnityEngine.Quaternion::Internal_LookRotation_Injected
 UnityEngine.Quaternion::Internal_Slerp_Injected
 UnityEngine.Quaternion::Internal_ToAxisAngleRad

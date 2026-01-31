@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: d74d36ce8e4247a469ed54468913bcee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: ObstacleFan
     second: {fileID: 2100000, guid: d74d36ce8e4247a469ed54468913bcee, type: 2}
   materials:
