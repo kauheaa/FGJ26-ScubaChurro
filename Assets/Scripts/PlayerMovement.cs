@@ -31,7 +31,6 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         targetX = (currentLane - 1) * laneDistance;
 
-        // Tallennetaan alkuperäinen väri
         if (TryGetComponent<Renderer>(out Renderer rend))
             originalColor = rend.material.color;
     }
@@ -46,15 +45,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveForward()
     {
-        Vector3 forwardMove = Vector3.forward * forwardSpeed;
-        controller.Move(forwardMove * Time.deltaTime);
+        controller.Move(Vector3.forward * forwardSpeed * Time.deltaTime);
     }
 
     private void MoveSideways()
     {
         float newX = Mathf.Lerp(transform.position.x, targetX, laneChangeSpeed * Time.deltaTime);
-        Vector3 move = new Vector3(newX - transform.position.x, 0, 0);
-        controller.Move(move);
+        controller.Move(new Vector3(newX - transform.position.x, 0, 0));
     }
 
     private void ApplyGravity()
@@ -114,29 +111,31 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleInput()
     {
-        // Editor nuolilla
+        // ---------- Editor ----------
         if (Input.GetKeyDown(KeyCode.LeftArrow)) ChangeLane(-1);
         if (Input.GetKeyDown(KeyCode.RightArrow)) ChangeLane(1);
         if (Input.GetKeyDown(KeyCode.UpArrow)) Jump();
         if (Input.GetKeyDown(KeyCode.DownArrow)) Slide();
 
-        // Mobiili swipe
+        // ---------- Mobiili swipe ----------
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
 
             if (touch.phase == TouchPhase.Began)
+            {
                 touchStart = touch.position;
+            }
             else if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
             {
                 touchEnd = touch.position;
+
                 Vector2 swipe = touchEnd - touchStart;
 
                 if (swipe.magnitude >= minSwipeDistance)
                 {
                     if (Mathf.Abs(swipe.x) > Mathf.Abs(swipe.y))
                     {
-                        // Oikea / vasen
                         if (swipe.x > 0)
                         {
                             ChangeLane(1);
@@ -150,12 +149,12 @@ public class PlayerMovement : MonoBehaviour
                     }
                     else
                     {
-                        // Ylös / alas
                         if (swipe.y > 0) Jump();
                         else Slide();
                     }
                 }
             }
         }
+
     }
 }
