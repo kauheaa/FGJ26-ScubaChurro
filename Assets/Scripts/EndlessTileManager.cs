@@ -8,7 +8,7 @@ public class EndlessTileManager : MonoBehaviour
     public GameObject[] tilePrefabs;
 
     public int tilesOnScreen = 6;
-    public float tileLength = 1f; // Kaikki prefabit oletetaan saman Z:n
+    public float tileLength = 1f; 
 
     private float nextSpawnZ = 0f;
     private Queue<GameObject> activeTiles = new Queue<GameObject>();
@@ -17,7 +17,6 @@ public class EndlessTileManager : MonoBehaviour
     {
         if (tilePrefabs.Length == 0)
         {
-            Debug.LogError("Ei tile-prefabeja!");
             return;
         }
 
@@ -29,15 +28,13 @@ public class EndlessTileManager : MonoBehaviour
 
     void Update()
     {
-        // Spawnataan uusi tile
         if (player.position.z >= nextSpawnZ - (tilesOnScreen * tileLength))
             SpawnTile();
 
-        // Poistetaan vanha tile vain, jos se on tarpeeksi kaukana pelaajasta
         if (activeTiles.Count > 0)
         {
             GameObject oldestTile = activeTiles.Peek();
-            if (player.position.z - oldestTile.transform.position.z >= tileLength * 2f) // takana 2 tileä
+            if (player.position.z - oldestTile.transform.position.z >= tileLength * 2f) 
             {
                 Destroy(activeTiles.Dequeue());
             }

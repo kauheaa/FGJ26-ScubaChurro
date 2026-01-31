@@ -3,9 +3,10 @@ using TMPro;
 
 public class TimerTMP : MonoBehaviour
 {
-    public TMP_Text timerText;      // TMP_Text UI-elementti
-    private float elapsedTime;      // Kulunut aika sekunneissa
-    private bool running = true;
+    public TMP_Text timerText;
+    private float elapsedTime;      
+    private bool running = true;    
+    public float ElapsedTime => elapsedTime;
 
     void Update()
     {
@@ -34,5 +35,6 @@ public class TimerTMP : MonoBehaviour
         elapsedTime = 0f;
         UpdateTimerUI();
         running = true;
+
     }
 }

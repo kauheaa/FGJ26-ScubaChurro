@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CurvedTile : MonoBehaviour
 {
-    public Transform childObject; // assign editorissa se child, jonka snapataan
+    public Transform childObject; 
 
     private bool playerOnTile = false;
     private bool hasSnapped = false;
@@ -11,13 +11,13 @@ public class CurvedTile : MonoBehaviour
     {
         CheckPlayerOnTile();
 
-        // Snapataan vain kerran
+       
         if (playerOnTile && !hasSnapped && childObject != null)
         {
-            // Snapataan sijainti X=0, Y=0, Z=0
+            
             childObject.position = new Vector3(0f, 0f, 0f);
 
-            // Snapataan rotaatio Y=0
+            
             Vector3 euler = childObject.eulerAngles;
             euler.y = 0f;
             childObject.eulerAngles = euler;

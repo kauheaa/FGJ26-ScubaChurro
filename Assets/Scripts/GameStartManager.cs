@@ -5,33 +5,33 @@ using System.Collections;
 
 public class StartScreenManager : MonoBehaviour
 {
-    public GameObject startPanel;   // Paneeli, jossa Play-nappi
-    public Button playButton;       // Play-nappi
-    public TMP_Text timerText;      // Timer UI
+    public GameObject startPanel;   
+    public Button playButton;       
+    public TMP_Text timerText;     
     public float startDelay = 2f;   // Animaation kesto
 
     private bool gameStarted = false;
 
     void Start()
     {
-        Time.timeScale = 0f;               // Pys‰ytet‰‰n peli aluksi
-        timerText.gameObject.SetActive(false); // Piilotetaan Timer
+        Time.timeScale = 0f;               
+        timerText.gameObject.SetActive(false);
     }
 
     public void OnPlayButtonPressed()
     {
-        playButton.interactable = false;   // estet‰‰n uudelleen painaminen
+        playButton.interactable = false;  
         StartCoroutine(StartGameAfterDelay());
     }
 
     private IEnumerator StartGameAfterDelay()
     {
-        yield return new WaitForSecondsRealtime(startDelay); // odotetaan animaation ajan
+        yield return new WaitForSecondsRealtime(startDelay);
 
-        startPanel.SetActive(false);       // piilotetaan paneeli
-        timerText.gameObject.SetActive(true); // n‰ytet‰‰n timer
+        startPanel.SetActive(false);      
+        timerText.gameObject.SetActive(true); 
 
-        Time.timeScale = 1f;               // peli alkaa
+        Time.timeScale = 1f;
         gameStarted = true;
     }
 
