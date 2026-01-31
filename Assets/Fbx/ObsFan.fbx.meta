@@ -3,7 +3,12 @@ guid: 113052e342615684e9def94807f71238
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ObstacleFan
+    second: {fileID: 2100000, guid: d74d36ce8e4247a469ed54468913bcee, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

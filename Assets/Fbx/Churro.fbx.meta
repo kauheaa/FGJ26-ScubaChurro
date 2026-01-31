@@ -3,7 +3,12 @@ guid: c581065fc5044b841aef902028d477b2
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChurroTexture
+    second: {fileID: 2100000, guid: 5b10497aa9f4c294c8f54a5a32c162f0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
