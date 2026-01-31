@@ -10,6 +10,7 @@ public class SimpleAudio : MonoBehaviour
     public AudioClip sfx2;
     public AudioClip sfx3;
     public AudioClip sfx4;
+    public AudioClip sfx5;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class SimpleAudio : MonoBehaviour
     public void PlaySFX2() => Play(sfx2);
     public void PlaySFX3() => Play(sfx3);
     public void PlaySFX4() => Play(sfx4);
+    public void PlaySFX5() => Play(sfx5);
 
     private void Play(AudioClip clip)
     {

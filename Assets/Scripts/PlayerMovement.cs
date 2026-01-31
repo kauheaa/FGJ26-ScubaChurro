@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private float minSwipeDistance = 50f;
 
     private Color originalColor;
+    public SimpleAudio audio;
 
     void Start()
     {
@@ -67,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (controller.isGrounded)
             velocity.y = jumpForce;
+            audio.PlaySFX3();
     }
 
     private void Slide()
@@ -99,16 +101,6 @@ public class PlayerMovement : MonoBehaviour
         targetX = (currentLane - 1) * laneDistance;
     }
 
-    private IEnumerator FlashColor(Color flashColor)
-    {
-        if (TryGetComponent<Renderer>(out Renderer rend))
-        {
-            rend.material.color = flashColor;
-            yield return new WaitForSeconds(0.2f);
-            rend.material.color = originalColor;
-        }
-    }
-
     private void HandleInput()
     {
         // ---------- Editor ----------
@@ -137,14 +129,12 @@ public class PlayerMovement : MonoBehaviour
                     if (Mathf.Abs(swipe.x) > Mathf.Abs(swipe.y))
                     {
                         if (swipe.x > 0)
-                        {
+                        { audio.PlaySFX4();
                             ChangeLane(1);
-                            StartCoroutine(FlashColor(Color.blue));
                         }
                         else
-                        {
+                        { audio.PlaySFX4();
                             ChangeLane(-1);
-                            StartCoroutine(FlashColor(Color.red));
                         }
                     }
                     else

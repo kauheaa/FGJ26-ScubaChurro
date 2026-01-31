@@ -11,6 +11,7 @@ public class StartScreenManager : MonoBehaviour
     public float startDelay = 2f;   // Animaation kesto
 
     private bool gameStarted = false;
+    public SimpleAudio audio;
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class StartScreenManager : MonoBehaviour
 
         startPanel.SetActive(false);      
         timerText.gameObject.SetActive(true); 
-
+        audio.PlaySFX3();
         Time.timeScale = 1f;
         gameStarted = true;
     }

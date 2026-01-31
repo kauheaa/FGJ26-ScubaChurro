@@ -872,6 +872,7 @@ MonoBehaviour:
   panel: {fileID: 1679662482}
   highscoreText: {fileID: 1422245146}
   scoreText: {fileID: 229663609}
+  audio: {fileID: 8244439339938322357}
 --- !u!114 &466080774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -890,6 +891,7 @@ MonoBehaviour:
   jumpForce: 7
   gravity: -20
   slideDuration: 1
+  audio: {fileID: 8244439339938322357}
 --- !u!4 &466080775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c581065fc5044b841aef902028d477b2, type: 3}
@@ -1185,7 +1187,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 916154675}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8244439339938322358}
+        m_TargetAssemblyTypeName: ReplayButton, Assembly-CSharp
+        m_MethodName: ReplayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &916154675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2172,6 +2186,7 @@ GameObject:
   - component: {fileID: 8244439339938322355}
   - component: {fileID: 8244439339938322357}
   - component: {fileID: 8244439339938322356}
+  - component: {fileID: 8244439339938322358}
   m_Layer: 0
   m_Name: SewerTileManager
   m_TagString: Untagged
@@ -2249,6 +2264,7 @@ MonoBehaviour:
   playButton: {fileID: 1206028847}
   timerText: {fileID: 498966083}
   startDelay: 2
+  audio: {fileID: 8244439339938322357}
 --- !u!114 &8244439339938322354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,10 +2408,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleAudio
   audioSource: {fileID: 8244439339938322356}
-  sfx1: {fileID: 0}
-  sfx2: {fileID: 0}
-  sfx3: {fileID: 0}
-  sfx4: {fileID: 0}
+  sfx1: {fileID: 8300000, guid: 0efced925086ecb44a08188c2d6e4117, type: 3}
+  sfx2: {fileID: 8300000, guid: 9ba8256be4d20b34ba3ba3bfd71e4a30, type: 3}
+  sfx3: {fileID: 8300000, guid: b97f81e28da4d35499cb50f6f84b3636, type: 3}
+  sfx4: {fileID: 8300000, guid: 05df595b7e6638942a25b008e2c778e5, type: 3}
+  sfx5: {fileID: 8300000, guid: 11f06b9fa00dd214d974187727bb1358, type: 3}
+--- !u!114 &8244439339938322358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5397736407822461070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b4bea5cb2d60d4eb8804c21a0e740d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReplayButton
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

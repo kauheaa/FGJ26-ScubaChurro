@@ -11,7 +11,8 @@ public class PlayerDeath : MonoBehaviour
     [Header("UI Elements")]
     public GameObject panel;        
     public TMP_Text highscoreText;  
-    public TMP_Text scoreText;      
+    public TMP_Text scoreText;   
+    public SimpleAudio audio;    
 
     private void Start()
     {
@@ -25,8 +26,9 @@ public class PlayerDeath : MonoBehaviour
 
         if (other.CompareTag("Obstacle"))
         {
-            dead = true;
 
+            dead = true;
+             audio.PlaySFX5();
             Time.timeScale = 0f;
 
             if (timer != null)
