@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class EndlessTileManager : MonoBehaviour
@@ -13,12 +12,12 @@ public class EndlessTileManager : MonoBehaviour
     private float nextSpawnZ = 0f;
     private Queue<GameObject> activeTiles = new Queue<GameObject>();
 
+    private int tilesSpawned = 0; 
+
     void Start()
     {
         if (tilePrefabs.Length == 0)
-        {
             return;
-        }
 
         tileLength = tilePrefabs[0].GetComponent<BoxCollider>().size.z;
 
@@ -43,13 +42,22 @@ public class EndlessTileManager : MonoBehaviour
 
     private void SpawnTile()
     {
-        int index = Random.Range(0, tilePrefabs.Length);
-        GameObject prefab = tilePrefabs[index];
+        GameObject prefab;
+
+        if (tilesSpawned < 10)
+            prefab = tilePrefabs[0];
+        else
+        {
+            int index = Random.Range(0, tilePrefabs.Length);
+            prefab = tilePrefabs[index];
+        }
 
         Vector3 spawnPos = new Vector3(0f, 0f, nextSpawnZ + tileLength * 0.5f);
         GameObject tile = Instantiate(prefab, spawnPos, Quaternion.identity);
 
         activeTiles.Enqueue(tile);
         nextSpawnZ += tileLength;
+
+        tilesSpawned++;
     }
 }

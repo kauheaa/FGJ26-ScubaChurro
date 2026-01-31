@@ -1005,6 +1005,7 @@ UnityEngine.Physics::Internal_RaycastAll_Injected
 UnityEngine.Physics::SendOnCollisionEnter_Injected
 UnityEngine.Physics::SendOnCollisionExit_Injected
 UnityEngine.Physics::SendOnCollisionStay_Injected
+UnityEngine.Physics::OverlapBox_Internal_Injected
 UnityEngine.Physics2D::get_queriesHitTriggers
 UnityEngine.Physics2D::GetRayIntersectionAll_Internal_Injected
 UnityEngine.PhysicsScene::Internal_RaycastTest_Injected
@@ -1025,6 +1026,11 @@ UnityEngine.PlayerConnectionInternal::PollInternal
 UnityEngine.PlayerConnectionInternal::RegisterInternal_Injected
 UnityEngine.PlayerConnectionInternal::SendMessage_Injected
 UnityEngine.PlayerConnectionInternal::UnregisterInternal_Injected
+UnityEngine.PlayerPrefs::TrySetFloat_Injected
+UnityEngine.PlayerPrefs::TrySetInt_Injected
+UnityEngine.PlayerPrefs::GetInt_Injected
+UnityEngine.PlayerPrefs::GetFloat_Injected
+UnityEngine.PlayerPrefs::Save
 UnityEngine.Profiling.Profiler::GetRuntimeMemorySizeLong_Injected
 UnityEngine.PropertyNameUtils::PropertyNameFromString_Injected
 UnityEngine.QualitySettings::get_billboardsFaceCameraPosition
@@ -1663,6 +1669,7 @@ UnityEngine.Time::get_fixedUnscaledTime
 UnityEngine.Time::get_realtimeSinceStartup
 UnityEngine.Time::get_smoothDeltaTime
 UnityEngine.Time::get_time
+UnityEngine.Time::get_timeScale
 UnityEngine.Time::get_unscaledDeltaTime
 UnityEngine.Time::get_unscaledTime
 UnityEngine.Time::get_timeAsRational_Injected

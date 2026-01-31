@@ -1851,8 +1851,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EndlessTileManager
   player: {fileID: 639791716}
   tilePrefabs:
-  - {fileID: 2466629928099360106, guid: 021ac16ccca32214288ea3809c94df25, type: 3}
+  - {fileID: 7870500488100079388, guid: f1083032cc0905c4f8f0f1e23a2fb0d9, type: 3}
   - {fileID: 2005790437123930278, guid: bf781064ba49aae4a8ac33addcda9c64, type: 3}
+  - {fileID: 2466629928099360106, guid: 021ac16ccca32214288ea3809c94df25, type: 3}
   - {fileID: 5493731254683825842, guid: d2dcf05b7219da0469e430423ae24527, type: 3}
   tilesOnScreen: 6
   tileLength: 1
