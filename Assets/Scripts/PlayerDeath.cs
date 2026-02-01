@@ -12,12 +12,14 @@ public class PlayerDeath : MonoBehaviour
     public GameObject panel;        
     public TMP_Text highscoreText;  
     public TMP_Text scoreText;   
-    public SimpleAudio audio;    
+    public SimpleAudio audio;
+    public  Animator animator;
 
     private void Start()
     {
         if (panel != null)
             panel.SetActive(false); 
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,7 +29,7 @@ public class PlayerDeath : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             
-            // animator.SetTrigger("Death");
+            animator.SetTrigger("Death");
             dead = true;
             audio.PlaySFX5();
             Time.timeScale = 0f;
@@ -41,7 +43,7 @@ public class PlayerDeath : MonoBehaviour
 
     private IEnumerator ShowEndPanelCoroutine()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        yield return new WaitForSecondsRealtime(1f);
 
         if (panel != null)
             panel.SetActive(true);
