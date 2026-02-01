@@ -6,8 +6,10 @@ public class ObstacleSpawner : MonoBehaviour
     public float laneDistance = 3f;
     public float spawnChance = 0.5f;
 
-    public void SpawnObstacle(Vector3 tileCenterPosition)
-    {
+    public void SpawnObstacle(Vector3 tileCenterPosition,  GameObject tile)
+    { 
+        if (tile.CompareTag("CurvedTile"))
+            return;
         if (obstaclePrefabs.Length == 0) return;
         if (Random.value > spawnChance) return;
 

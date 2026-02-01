@@ -515,7 +515,6 @@ GameObject:
   m_Component:
   - component: {fileID: 330585546}
   - component: {fileID: 330585545}
-  - component: {fileID: 330585544}
   - component: {fileID: 330585547}
   - component: {fileID: 330585548}
   m_Layer: 0
@@ -525,14 +524,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &330585544
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330585543}
-  m_Enabled: 1
 --- !u!20 &330585545
 Camera:
   m_ObjectHideFlags: 0
@@ -3371,6 +3362,10 @@ MonoBehaviour:
   - {fileID: 7870500488100079388, guid: f1083032cc0905c4f8f0f1e23a2fb0d9, type: 3}
   - {fileID: 2005790437123930278, guid: bf781064ba49aae4a8ac33addcda9c64, type: 3}
   - {fileID: 2466629928099360106, guid: 021ac16ccca32214288ea3809c94df25, type: 3}
+  - {fileID: 4359819868187508178, guid: a9c4c449f11cfc54885d7bfe49826957, type: 3}
+  - {fileID: 3083888324051650138, guid: f26169b36668f9843bfc0dd8bed16edd, type: 3}
+  - {fileID: 4378048273967389303, guid: e55c68c0808d39c4d9d4033cb34a99d5, type: 3}
+  - {fileID: 3159547260250101600, guid: 79669f49254137b4584723958ea7cfe6, type: 3}
   obstacleSpawner: {fileID: 8244439339938322355}
   tilesOnScreen: 10
 --- !u!114 &8244439339938322352
@@ -3436,7 +3431,7 @@ MonoBehaviour:
   - {fileID: 4254838278950075500, guid: fe02ee6b97e3959438029af6bde87b42, type: 3}
   - {fileID: 3352286322809186289, guid: eeeaafa07009562478df948e4bac4c72, type: 3}
   laneDistance: 3
-  spawnChance: 0.5
+  spawnChance: 0.2
 --- !u!82 &8244439339938322356
 AudioSource:
   m_ObjectHideFlags: 0

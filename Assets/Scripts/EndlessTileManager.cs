@@ -57,10 +57,8 @@ void Update()
         else
             prefab = tilePrefabs[Random.Range(0, tilePrefabs.Length)];
 
-        // Instantiate prefab
         GameObject tile = Instantiate(prefab, Vector3.zero, Quaternion.identity);
 
-        // Bounds
         Renderer[] renderers = tile.GetComponentsInChildren<Renderer>();
         Bounds bounds = new Bounds(tile.transform.position, Vector3.zero);
         foreach (Renderer r in renderers)
@@ -68,7 +66,6 @@ void Update()
 
         float tileLengthZ = bounds.size.z;
 
-        // Siirrä tile niin, että alku (min Z) on nextSpawnZ
         float offset = bounds.min.z - tile.transform.position.z;
         tile.transform.position = new Vector3(0f, 0f, nextSpawnZ - offset);
 
@@ -77,6 +74,6 @@ void Update()
         tilesSpawned++;
 
         if (obstacleSpawner != null && tilesSpawned > 10)
-            obstacleSpawner.SpawnObstacle(tile.transform.position);
+           obstacleSpawner.SpawnObstacle(tile.transform.position, tile);
     }
 }
