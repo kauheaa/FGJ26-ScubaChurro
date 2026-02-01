@@ -57,10 +57,10 @@ public class PlayerDeath : MonoBehaviour
         }
 
         if (highscoreText != null)
-            highscoreText.text = "Highscore: " + FormatTime(highscore);
+            highscoreText.text = FormatTime(highscore);
 
         if (scoreText != null)
-            scoreText.text = "Score: " + FormatTime(currentScore);
+            scoreText.text = FormatTime(currentScore);
     }
 
     private string FormatTime(float time)

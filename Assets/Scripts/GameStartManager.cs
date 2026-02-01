@@ -5,7 +5,8 @@ using System.Collections;
 
 public class StartScreenManager : MonoBehaviour
 {
-    public GameObject startPanel;   
+    public GameObject startPanel;
+    public Animator animator;
     public Button playButton;       
     public TMP_Text timerText;     
     public float startDelay = 2f;   // Animaation kesto
@@ -21,14 +22,14 @@ public class StartScreenManager : MonoBehaviour
 
     public void OnPlayButtonPressed()
     {
-        playButton.interactable = false;  
-        StartCoroutine(StartGameAfterDelay());
+        playButton.interactable = false;
+		animator.SetTrigger("GameStart");
+		StartCoroutine(StartGameAfterDelay());
     }
 
     private IEnumerator StartGameAfterDelay()
     {
         yield return new WaitForSecondsRealtime(startDelay);
-
         startPanel.SetActive(false);      
         timerText.gameObject.SetActive(true); 
         audio.PlaySFX3();
