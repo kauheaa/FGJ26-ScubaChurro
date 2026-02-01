@@ -23,22 +23,22 @@ public class EndlessTileManager : MonoBehaviour
 void Update()
 {
     // Spawnataan uutta kun pelaaja lähestyy loppua
-    if (player.position.z >= nextSpawnZ - 60f)
+    if (player.position.z >= nextSpawnZ - 250f)
         SpawnTile();
 
-    // Poistetaan tile VASTA kun pelaajan takana on vähintään 2 tileä
+   
     if (activeTiles.Count > 2)
     {
         GameObject oldestTile = activeTiles.Peek();
 
-        // Haetaan vanhimman tilen renderer
+        
         Renderer r = oldestTile.GetComponentInChildren<Renderer>();
         if (r == null) return;
 
         float tileEndZ = r.bounds.max.z;
 
-        // Pelaajan pitää olla SELVÄSTI kahden tilen päässä
-        float safeDistance = 30f; // ← säädä tarvittaessa
+        
+        float safeDistance = 30f; 
 
         if (player.position.z > tileEndZ + safeDistance)
         {

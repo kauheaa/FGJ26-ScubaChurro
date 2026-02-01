@@ -26,9 +26,10 @@ public class PlayerDeath : MonoBehaviour
 
         if (other.CompareTag("Obstacle"))
         {
-
+            
+            // animator.SetTrigger("Death");
             dead = true;
-             audio.PlaySFX5();
+            audio.PlaySFX5();
             Time.timeScale = 0f;
 
             if (timer != null)

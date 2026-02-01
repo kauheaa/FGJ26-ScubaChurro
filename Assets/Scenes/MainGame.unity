@@ -3367,7 +3367,7 @@ MonoBehaviour:
   - {fileID: 4378048273967389303, guid: e55c68c0808d39c4d9d4033cb34a99d5, type: 3}
   - {fileID: 3159547260250101600, guid: 79669f49254137b4584723958ea7cfe6, type: 3}
   obstacleSpawner: {fileID: 8244439339938322355}
-  tilesOnScreen: 10
+  tilesOnScreen: 25
 --- !u!114 &8244439339938322352
 MonoBehaviour:
   m_ObjectHideFlags: 0
