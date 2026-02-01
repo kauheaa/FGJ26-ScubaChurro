@@ -35,6 +35,6 @@ public class SimpleAudio : MonoBehaviour
     private void PlaySFX(AudioClip clip)
     {
         if (clip == null || sfxSource == null) return;
-        sfxSource.PlayOneShot(clip);
+        sfxSource.PlayOneShot(clip, 2f);
     }
 }
