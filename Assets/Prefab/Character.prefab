@@ -94,6 +94,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 455903543758162770, guid: af765dd7bf1cc48428f7c9e36f497020, type: 3}
   m_PrefabInstance: {fileID: 2944272058552181379}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &7554591551555877439 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4614900075628058812, guid: af765dd7bf1cc48428f7c9e36f497020, type: 3}
+  m_PrefabInstance: {fileID: 2944272058552181379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7215963696887308735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,6 +173,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c581065fc5044b841aef902028d477b2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8121535996461441951}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c581065fc5044b841aef902028d477b2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6327198281942541984}
   m_SourcePrefab: {fileID: 100100000, guid: c581065fc5044b841aef902028d477b2, type: 3}
 --- !u!4 &7182953047451518548 stripped
 Transform:
@@ -201,6 +209,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6327198281942541984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7558492705909120238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34b724a9a73c3a149a13565676a2feda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ParticleBurst
+  bubbles: {fileID: 7554591551555877439}
 --- !u!4 &8627580557314568436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7809503375537991349, guid: c581065fc5044b841aef902028d477b2, type: 3}
