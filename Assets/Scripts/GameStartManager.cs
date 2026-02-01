@@ -18,7 +18,7 @@ public class StartScreenManager : MonoBehaviour
     {
         Time.timeScale = 0f;               
         timerText.gameObject.SetActive(false);
-    }
+	}
 
     public void OnPlayButtonPressed()
     {
