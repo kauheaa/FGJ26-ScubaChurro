@@ -3833,14 +3833,14 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 77
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -3930,7 +3930,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb2c7a1183ffba43a45342b8b9715b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleAudio
-  audioSource: {fileID: 8244439339938322356}
+  bgSource: {fileID: 8244439339938322356}
+  sfxSource: {fileID: 8244439339938322356}
+  bgMusic: {fileID: 8300000, guid: c4852659ed6d23b408b93ea643a3b518, type: 3}
   sfx1: {fileID: 8300000, guid: 0efced925086ecb44a08188c2d6e4117, type: 3}
   sfx2: {fileID: 8300000, guid: 9ba8256be4d20b34ba3ba3bfd71e4a30, type: 3}
   sfx3: {fileID: 8300000, guid: b97f81e28da4d35499cb50f6f84b3636, type: 3}
