@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float slideDuration = 1f;
 
     private CharacterController controller;
+    private Animator animator;
     private Vector3 velocity;
 
     private int currentLane = 1;
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         targetX = (currentLane - 1) * laneDistance;
 
         if (TryGetComponent<Renderer>(out Renderer rend))
@@ -69,7 +71,8 @@ public class PlayerMovement : MonoBehaviour
         if (controller.isGrounded)
             velocity.y = jumpForce;
             audio.PlaySFX3();
-    }
+		    animator.SetTrigger("Jump");
+	}
 
     private void Slide()
     {
@@ -99,7 +102,15 @@ public class PlayerMovement : MonoBehaviour
     {
         currentLane = Mathf.Clamp(currentLane + direction, 0, 2);
         targetX = (currentLane - 1) * laneDistance;
-    }
+        if (direction < 0)
+        {
+            animator.SetTrigger("SwipeLeft");
+         }
+        else if (direction > 0)
+        {
+            animator.SetTrigger("SwipeRight");
+        }
+	}
 
     private void HandleInput()
     {
